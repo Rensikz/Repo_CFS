@@ -37,6 +37,7 @@ public class Atividade2 {
 			System.out.println(n1 / n2);
 			break;
 		default:
+			System.out.println("Nao identificado comando");
 			break;
 		}
 	}
