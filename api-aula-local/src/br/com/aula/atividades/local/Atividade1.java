@@ -20,11 +20,10 @@ public class Atividade1 {
 		int idade = ida.nextInt();		
 		
 		if (idade >= 18) {
-			System.out.println(nome+" Seja Bem Vindo");
-						
+			System.out.println(nome+" Seja Bem Vindo");						
 		}
 		else {
-			System.out.println(nome + " menores de idade nao são permitidos");
+			System.out.println(nome + " menores de idade nao sao permitidos");
 		}
 		
 	}
