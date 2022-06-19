@@ -1,5 +1,7 @@
 package br.com.aula.atividades.local;
 
+import java.util.Scanner;
+
 public class Atividade3 {
 	
 	//Colete a quantidade de alunos de uma turma
@@ -19,6 +21,71 @@ public class Atividade3 {
 	//concluindo a atividade subir ela para seu repositório do Git
 	//cada Aluno poderá ter seu código analisado em uma call privada depois da aula (de forma randon)
 	public static void main(String[] args) {
+		
+		int choi;
+		
+		Scanner scan = new Scanner(System.in);
+		Scanner sca = new Scanner(System.in);
+		Scanner choice = new Scanner(System.in);
+		Scanner notaaluno = new Scanner(System.in);
+		
+		
+		System.out.println("Quantos alunos? ");
+		int aluno = scan.nextInt();	
+		System.out.println("Quantas materias?");
+		int mat = sca.nextInt();
+		
+		
+		String[] Nomes = new String[aluno];
+		Integer[] Notas = new Integer[Not];
+		Integer[] materias = new Integer[mat];
+		
+
+		for(int y = 0; y < mat; y++) {	
+			int cont = 1;
+			System.out.println("Materia: "+ cont);
+		}
+			System.out.println("Qual materia vamos ver as notas?");
+			choi = choice.nextInt();	
+			
+			switch (choi) {
+			case 1:
+				System.out.println("Veremos a primeira entao..");
+				for(int i = 0; i < aluno; i++) {
+					System.out.println("Escreva o nome do aluno: ");
+					Nomes[i] = scan.next();
+					
+					for(int x = 0; x < 4; x++) {
+						int cont = 1;
+						System.out.println("Fale a" + cont + "nota" + Nomes[x]);
+						
+						Notas[x] = Not.nextInt();
+						cont++;
+					
+					}
+					
+				}
+				break;
+			case 2:
+				System.out.println("Selecionou a opcao 2");
+				break;
+			}	
+		
+		
+		for(int i = 0; i < aluno; i++) {
+			System.out.println("Escreva o nome do aluno: ");
+			Nomes[i] = scan.next();
+			
+		}
+			
+		
+			
+		
+		for(int x = 0; x < 4; x++) {
+			System.out.println("Fale a nota do aluno: ");
+			//Notas[x] = sca.nextInt();
+		}
+		
 		
 	}
 
