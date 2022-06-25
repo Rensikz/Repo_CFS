@@ -22,69 +22,133 @@ public class Atividade3 {
 	//cada Aluno poderá ter seu código analisado em uma call privada depois da aula (de forma randon)
 	public static void main(String[] args) {
 		
-		int choi;
+		Scanner nom = new Scanner(System.in);
+		Scanner alunos = new Scanner(System.in);
+		Scanner mat = new Scanner(System.in);
+		Scanner not = new Scanner(System.in);
+		double med = 0;
+		int matA = 0;
+		int matB = 0;
 		
-		Scanner scan = new Scanner(System.in);
-		Scanner sca = new Scanner(System.in);
-		Scanner choice = new Scanner(System.in);
-		Scanner notaaluno = new Scanner(System.in);
+		System.out.println("Quantos alunos?");
 		
+		int aln = alunos.nextInt();
+		String[] arrayNome = new String[aln];
 		
-		System.out.println("Quantos alunos? ");
-		int aluno = scan.nextInt();	
-		System.out.println("Quantas materias?");
-		int mat = sca.nextInt();
-		
-		
-		String[] Nomes = new String[aluno];
-		Integer[] Notas = new Integer[Not];
-		Integer[] materias = new Integer[mat];
-		
-
-		for(int y = 0; y < mat; y++) {	
-			int cont = 1;
-			System.out.println("Materia: "+ cont);
+		for(int i = 0; i < aln; i++) {
+			System.out.println("Escreva seu nome: ");
+			arrayNome[i] = alunos.next();
 		}
-			System.out.println("Qual materia vamos ver as notas?");
-			choi = choice.nextInt();	
+		
+	for(int i = 0; i <= aln;) {	
+		if (matA == 1 && matB == 1){
+			matA = 0;
+			matB = 0;
+			i++;
+		}
+		
+		System.out.println("Qual materia? Obs: Aluno: " + arrayNome[i]);
+		
+		System.out.println("materia_a [1]");
+		System.out.println("materia_b [2]");
+		
+		int materia = mat.nextInt();
+		
+		switch (materia) {
+		case 1:
 			
-			switch (choi) {
-			case 1:
-				System.out.println("Veremos a primeira entao..");
-				for(int i = 0; i < aluno; i++) {
-					System.out.println("Escreva o nome do aluno: ");
-					Nomes[i] = scan.next();
+			if (matA == 0) {
+				double nota = 0;				
+				int conta = 1;
+				for(int x = 0; x <= 3; x++) {
 					
-					for(int x = 0; x < 4; x++) {
-						int cont = 1;
-						System.out.println("Fale a" + cont + "nota" + Nomes[x]);
-						
-						Notas[x] = Not.nextInt();
-						cont++;
 					
-					}
+				System.out.println("Diga a " + conta + " nota");
+				nota = nota + not.nextInt();
+				med = nota/4;
+				conta = conta + 1;
+				matA = 1;
+				 
+				}
+				
+				System.out.println("A nota do aluno: " + arrayNome[i] + " = " + med);
+				if(med >= 7) {
+					System.out.println("Aprovado!");
+				}
+				else if (med >= 6.25) {
+					System.out.println("Em recuperacao!");
+				}
+				else {
+					System.out.println("Reprovado!");
+				}
+			}
+			else {
+				System.out.println("A nota do aluno: " + arrayNome[i] + " = " + med);
+				if(med >= 7) {
+					System.out.println("Aprovado!");
+				}
+				else if (med >= 6.25) {
+					System.out.println("Em recuperacao!");
+				}
+				else {
+					System.out.println("Reprovado!");
+				}
+			
+			}
+			
+			break;
+		case 2:
+			if (matB == 0) {
+				double nota = 0;
+				int conta = 1;
+				
+				for(int y = 0; y <= 3; y++) {
+					
+					System.out.println("Diga a " + conta + " nota");
+					nota = nota + not.nextInt();
+					med = nota/4;
+					conta = conta + 1;
+					matB = 1;	
 					
 				}
-				break;
-			case 2:
-				System.out.println("Selecionou a opcao 2");
-				break;
-			}	
-		
-		
-		for(int i = 0; i < aluno; i++) {
-			System.out.println("Escreva o nome do aluno: ");
-			Nomes[i] = scan.next();
+				System.out.println("A nota do aluno: " + arrayNome[i] + " = " + med);
+				if(med >= 7) {
+					System.out.println("Aprovado!");
+				}
+				else if (med >= 6.25) {
+					System.out.println("Em recuperacao!");
+				}
+				else {
+					System.out.println("Reprovado!");
+				}
 			
+				
+			}
+			else {
+				System.out.println("A nota do aluno: " + arrayNome[i] + " = " + med);
+				if(med >= 7) {
+					System.out.println("Aprovado!");
+				}
+				else if (med >= 6.25) {
+					System.out.println("Em recuperacao!");
+				}
+				else {
+					System.out.println("Reprovado!");
+				}
+			}
+			
+			
+			
+			break;
+
+		default:
+			System.out.println("Escolha nao reconhecida!");
+			break;
 		}
-			
 		
-			
-		
-		for(int x = 0; x < 4; x++) {
-			System.out.println("Fale a nota do aluno: ");
-			//Notas[x] = sca.nextInt();
-		}
+
+	}
+	System.out.println("Notas Salvas!");
 		
 		
 	}
